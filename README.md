@@ -5,6 +5,7 @@
 Se pide resolver el problema con dos enfoques distintos:
 1. **Programación imperativa**.  
 2. **Programación declarativa/funcional**.  
+
 Finalmente, realizar un análisis comparativo entre ambos enfoques.
 
 # Solución Imperativa

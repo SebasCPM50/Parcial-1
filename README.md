@@ -53,29 +53,36 @@ print("Orden declarativo:", ordenados)
 # Comparaciones
 ## Claridad y legibilidad:
 Imperativo: Es más largo y detallado, muestra paso a paso el proceso
+
 Declarativo: Es más breve y directo, describe la regla de orden
 
 ## Expresividad y abstracción:
 Imperativo: bajo nivel, explica cómo hacerlo
+
 Declarativo: alto nivel, solo indica el qué hacer
 
 ## Estructuras de datos:
 Imperativo: modifica la lista original (mutabilidad)
+
 Declarativo: devuelve una nueva lista sin alterar la original (inmutabilidad)
 
 ## Manejo de estado:
 Imperativo: el estado cambia en cada iteración
+
 Declarativo: no se ven los cambios internos, más limpio
 
 ## Mantenimiento y extensión:
 Imperativo: más difícil de modificar si se cambia la regla
+
 Declarativo: basta con ajustar la clave de orden
 
 ## Eficiencia:
 Imperativo (burbuja): complejidad O(n²), poco eficiente para listas grandes
+
 Declarativo (sorted): usa Timsort (O(n log n)), mucho más rápido
 
 -----------------------------------------------------------------------------------------------------
 # En resumen:
 El imperativo sirve para comprender el proceso interno del ordenamiento, aunque es menos eficiente.
+
 El declarativo es más práctico, expresivo y eficiente, además de ser más fácil de mantener.

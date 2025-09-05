@@ -81,8 +81,70 @@ Imperativo (burbuja): complejidad O(n²), poco eficiente para listas grandes
 
 Declarativo (sorted): usa Timsort (O(n log n)), mucho más rápido
 
+
+
 -----------------------------------------------------------------------------------------------------
+
 # En resumen:
 El imperativo sirve para comprender el proceso interno del ordenamiento, aunque es menos eficiente.
 
 El declarativo es más práctico, expresivo y eficiente, además de ser más fácil de mantener.
+
+_____________________________________________________________________________________________________
+
+# Ejercicio 2 – Gestión de Estudiantes en C con Memoria Dinámica
+Struct optimizado: se usa bitfields para edad (7 bits) y id (25 bits). Así no gastamos 4 bytes enteros para cada uno
+
+Nombre y apellido: en lugar de reservar 100 chars, usamos malloc(strlen+1). Solo ocupa lo necesario
+
+Notas: cada estudiante tiene un array dinámico con solo las materias que cursa
+
+Funciones:
+
+crear_estudiante: reserva memoria y copia datos
+
+mostrar_estudiante: imprime la info
+
+liberar_estudiante: libera TODO (nombre, apellido, notas y el struct)
+
+main: creamos 2 estudiantes, los mostramos y liberamos memoria
+
+# Comparaciones
+
+## Claridad y legibilidad:
+El código tiene funciones separadas (crear, mostrar, liberar), lo cual facilita entender qué hace cada parte
+
+## Uso de memoria:
+Se reserva solo lo necesario para cadenas y calificaciones. Los bitfields reducen espacio en edad e ID
+
+## Estructuras dinámicas:
+Todo lo que puede variar (nombre largo, cantidad de materias) se maneja dinámicamente con malloc
+
+## Manejo de estado:
+El programa no guarda listas gigantes de estudiantes en memoria fija, cada registro se pide y se libera cuando se necesita
+
+## Eficiencia:
+
+Memoria: optimizada al máximo (solo lo necesario)
+
+Tiempo: un poco más de trabajo al reservar memoria, pero es aceptable
+
+## Mantenimiento y extensión:
+Fácil de extender si luego queremos agregar más campos al struct (ej. dirección)
+
+-----------------------------------------------------------------------------------------------------
+# Conclusiones
+
+El uso de memoria dinámica con malloc y free permite que cada estudiante ocupe solo el espacio estrictamente necesario, evitando desperdiciar
+
+Con bitfields se optimizó aún más el tamaño de los registros en campos pequeños como edad e identificación
+
+Separar las operaciones en funciones (crear, mostrar, liberar) hace que el programa sea más claro y fácil de mantener
+
+Aunque la gestión dinámica requiere más cuidado (liberar memoria siempre), la eficiencia en uso de recursos es mucho mayor
+
+Este enfoque combina optimización de memoria con legibilidad del código, cumpliendo el objetivo planteado
+
+_____________________________________________________________________________________________________
+
+# 

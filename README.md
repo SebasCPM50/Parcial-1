@@ -155,50 +155,37 @@ En esta situación, se solicita que la notación de este cálculo sea utilizada 
 
 El promedio es un cálculo muy habitual, que se define como la suma total de los elementos de una lista dividida por el número de elementos en ella
 
-# Definición matemática del promedio
-Dada una lista de \(n\) números:  
-
-\[
-xs = [x_1, x_2, x_3, \dots, x_n]
-\]
-
-El promedio se define como:  
-
-\[
-\text{promedio}(xs) = \frac{x_1 + x_2 + x_3 + \dots + x_n}{n}
-\]
-
 # Implementación en cálculo lambda
 
-1. **Suma de los elementos:**
-\[
-\text{sum} \equiv \lambda xs.\; \sum xs
-\]
+**Función suma**  
+   Definimos una función que recorre la lista y suma sus elementos:
 
-2. **Longitud de la lista:**
-\[
-\text{len} \equiv \lambda xs.\; n
-\]
+   SUM = λxs. si xs está vacía → 0
+si no → cabeza(xs) + SUM(cola(xs))
 
-3. **Promedio:**
-\[
-\text{promedio} \equiv \lambda xs.\; \dfrac{(\text{sum}\; xs)}{(\text{len}\; xs)}
-\]
+**Función longitud**  
+Definimos una función que cuenta cuántos elementos tiene la lista:
 
----
+LEN = λxs. si xs está vacía → 0
+si no → 1 + LEN(cola(xs))
+
+**Función promedio**  
+Ahora el promedio se define como la división de la suma entre la longitud:
+
+PROM = λxs. (SUM(xs)) / (LEN(xs))
+
 
 ## Ejemplo
-Sea la lista:
+Si tenemos la lista:
 
-\[
-xs = [2, 4, 6]
-\]
+[2, 4, 6]
 
-Aplicamos la función promedio:  
+Aplicamos:
 
-\[
-\text{promedio}(xs) = \dfrac{2+4+6}{3} = 4
-\]
+SUM([2,4,6]) = 2 + 4 + 6 = 12
+LEN([2,4,6]) = 3
+PROM([2,4,6]) = 12 / 3 = 4
+Resultado: **4**
 
 # Conclusiones finales
 El cálculo lambda posibilita expresar operaciones de manera **matemática** y **funcional**

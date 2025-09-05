@@ -109,29 +109,6 @@ liberar_estudiante: libera TODO (nombre, apellido, notas y el struct)
 
 main: creamos 2 estudiantes, los mostramos y liberamos memoria
 
-# Comparaciones
-
-## Claridad y legibilidad:
-El código tiene funciones separadas (crear, mostrar, liberar), lo cual facilita entender qué hace cada parte
-
-## Uso de memoria:
-Se reserva solo lo necesario para cadenas y calificaciones. Los bitfields reducen espacio en edad e ID
-
-## Estructuras dinámicas:
-Todo lo que puede variar (nombre largo, cantidad de materias) se maneja dinámicamente con malloc
-
-## Manejo de estado:
-El programa no guarda listas gigantes de estudiantes en memoria fija, cada registro se pide y se libera cuando se necesita
-
-## Eficiencia:
-
-Memoria: optimizada al máximo (solo lo necesario)
-
-Tiempo: un poco más de trabajo al reservar memoria, pero es aceptable
-
-## Mantenimiento y extensión:
-Fácil de extender si luego queremos agregar más campos al struct (ej. dirección)
-
 -----------------------------------------------------------------------------------------------------
 # Conclusiones
 

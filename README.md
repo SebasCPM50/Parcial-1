@@ -147,4 +147,62 @@ Este enfoque combina optimización de memoria con legibilidad del código, cumpl
 
 _____________________________________________________________________________________________________
 
-# 
+# Ejercicio 3 - Cálculo del Promedio con Cálculo Lambda
+
+El cálculo lambda es una herramienta matemática que posibilita que expliquemos el funcionamiento de la computación de forma declarativa
+ 
+En esta situación, se solicita que la notación de este cálculo sea utilizada para representar el promedio de un conjunto de números
+
+El promedio es un cálculo muy habitual, que se define como la suma total de los elementos de una lista dividida por el número de elementos en ella
+
+# Definición matemática del promedio
+Dada una lista de \(n\) números:  
+
+\[
+xs = [x_1, x_2, x_3, \dots, x_n]
+\]
+
+El promedio se define como:  
+
+\[
+\text{promedio}(xs) = \frac{x_1 + x_2 + x_3 + \dots + x_n}{n}
+\]
+
+# Implementación en cálculo lambda
+
+1. **Suma de los elementos:**
+\[
+\text{sum} \equiv \lambda xs.\; \sum xs
+\]
+
+2. **Longitud de la lista:**
+\[
+\text{len} \equiv \lambda xs.\; n
+\]
+
+3. **Promedio:**
+\[
+\text{promedio} \equiv \lambda xs.\; \dfrac{(\text{sum}\; xs)}{(\text{len}\; xs)}
+\]
+
+---
+
+## Ejemplo
+Sea la lista:
+
+\[
+xs = [2, 4, 6]
+\]
+
+Aplicamos la función promedio:  
+
+\[
+\text{promedio}(xs) = \dfrac{2+4+6}{3} = 4
+\]
+
+# Conclusiones finales
+El cálculo lambda posibilita expresar operaciones de manera **matemática** y **funcional**
+
+Reducimos el promedio a las dos operaciones fundamentales: **contar** y **sumar**
+
+Esta manera de escribirlo contribuye a entender el enfoque **declarativo** utilizado por lenguajes como **Haskell**
